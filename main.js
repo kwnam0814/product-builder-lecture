@@ -1,5 +1,40 @@
 const generateBtn = document.getElementById('generate');
 const numbersContainer = document.getElementById('numbers');
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggleBtn.textContent = 'Light Mode';
+    } else {
+        body.classList.remove('dark-mode');
+        themeToggleBtn.textContent = 'Dark Mode';
+    }
+    localStorage.setItem('theme', theme);
+}
+
+// Check for saved theme preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        // Default to light mode if no preference is saved
+        setTheme('light');
+    }
+});
+
+// Toggle theme on button click
+themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        setTheme('light');
+    } else {
+        setTheme('dark');
+    }
+});
 
 generateBtn.addEventListener('click', () => {
     const numbers = new Set();
