@@ -31,6 +31,69 @@ body.dark-mode h1 {
     color: #e0e0e0;
 }
 
+/* Contact Form Styles */
+.contact-form-container {
+    margin-top: 40px; /* Space above the form container */
+}
+
+.contact-form-container h2 {
+    color: #333;
+    margin-bottom: 24px;
+}
+
+body.dark-mode .contact-form-container h2 {
+    color: #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+body.dark-mode .form-group label {
+    color: #e0e0e0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+}
+
+body.dark-mode .form-group input[type="text"],
+body.dark-mode .form-group input[type="email"],
+body.dark-mode .form-group textarea {
+    background-color: #4a4a4a;
+    border-color: #666;
+    color: #e0e0e0;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     display: flex;
